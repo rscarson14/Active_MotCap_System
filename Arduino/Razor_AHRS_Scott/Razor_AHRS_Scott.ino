@@ -627,6 +627,7 @@ void loop()
     { } // Skip character
   }
   
+  //set led pin to respond to data from Hull effect
   data = PINB&PB3;
   if(!data){
     PORTB |= LED_ON;
