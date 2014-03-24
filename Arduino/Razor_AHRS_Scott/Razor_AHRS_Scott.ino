@@ -487,8 +487,8 @@ char readChar()
   return Serial.read();
 }
 
-#define PB3 0x08;
-#define PB4 0x10;
+#define PB3 0x08; //pin to read into from Hull sensor
+#define PB4 0x10; //pin to write to led
 
 #define LED_ON 0x10;
 #define LED_OFF ~0x10;
