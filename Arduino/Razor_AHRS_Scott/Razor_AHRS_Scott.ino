@@ -167,7 +167,7 @@
 // OUTPUT OPTIONS
 /*****************************************************************/
 // Set your serial port baud rate used to send out data here!
-#define OUTPUT__BAUD_RATE 57600
+#define OUTPUT__BAUD_RATE 9600
 
 // Sensor data output interval in milliseconds
 // This may not work, if faster than 20ms (=50Hz)
@@ -288,15 +288,6 @@ const float magn_ellipsoid_transform[3][3] = {{0.902, -0.00354, 0.000636}, {-0.0
 /*****************************************************************/
 /****************** END OF USER SETUP AREA!  *********************/
 /*****************************************************************/
-
-
-
-
-
-
-
-
-
 
 // Check if hardware version code is defined
 #ifndef HW__VERSION_CODE
