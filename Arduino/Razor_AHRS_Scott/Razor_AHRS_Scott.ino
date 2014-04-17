@@ -164,6 +164,8 @@
 //#define HW__VERSION_CODE 10724 // SparkFun "9DOF Sensor Stick" version "SEN-10724" (HMC5883L magnetometer)
 
 
+#define MASTER true //set true if this IMU is on the master board
+
 // OUTPUT OPTIONS
 /*****************************************************************/
 // Set your serial port baud rate used to send out data here!
@@ -180,12 +182,13 @@
 #define OUTPUT__MODE_SENSORS_CALIB 2 // Outputs calibrated sensor values for all 9 axes
 #define OUTPUT__MODE_SENSORS_RAW 3 // Outputs raw (uncalibrated) sensor values for all 9 axes
 #define OUTPUT__MODE_SENSORS_BOTH 4 // Outputs calibrated AND raw sensor values for all 9 axes
+
 // Output format definitions (do not change)
 #define OUTPUT__FORMAT_TEXT 0 // Outputs data as text
 #define OUTPUT__FORMAT_BINARY 1 // Outputs data as binary float
 
 // Select your startup output mode and format here!
-int output_mode = OUTPUT__MODE_ANGLES;
+int output_mode = OUTPUT__MODE_SENSORS_CALIB;
 int output_format = OUTPUT__FORMAT_TEXT;
 
 // Select if serial continuous streaming output is enabled per default on startup.
@@ -479,10 +482,10 @@ char readChar()
 }
 
 #define PB3 0x08; //pin to read into from Hull sensor
-#define PB4 0x10; //pin to write to led
+//#define PB4 0x10; //pin to write to led
 
-#define LED_ON 0x10;
-#define LED_OFF ~0x10;
+//#define LED_ON 0x10;
+//#define LED_OFF ~0x10;
 byte data;
 
 void setup()
